@@ -1,33 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Facebook Welcome Page</title>
+<style>
+    body {
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+}
+
+.container {
+	width: 800px;
+	margin: 40px auto;
+	position: relative;
+}
+
+.logo {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.logo img {
+	width: 100px;
+	height: 100px;
+}
+
+.login-form {
+	width: 300px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+	margin-top: 0;
+}
+
+.login-form input[type="email"], .login-form input[type="password"] {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+
+.login-form button[type="submit"] {
+	width: 100%;
+	height: 40px;
+	background-color: #1803d7d9;
+	color: #fff;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.login-form button[type="submit"]:hover {
+	background-color: #3e8e41;
+}
+
+.login-form a {
+	color: #4CAF50;
+	text-decoration: none;
+}
+
+.or-separator {
+	margin: 20px 0;
+	text-align: center;
+}
+
+.or-separator hr {
+	border: none;
+	border-top: 1px solid #ccc;
+	width: 30%;
+}
+
+.or-separator span {
+	background-color: #fff;
+	padding: 0 10px;
+	position: relative;
+	top: -10px;
+}
+
+.create-account-btn {
+	width: 100%;
+	height: 40px;
+	background-color: #4CAF50;
+	color: #fff;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+.background-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+</style>
 </head>
 <body>
-    <div class="container-fluid"> 
-        <div class="row">
- 
-    <div class="col-md-5">
-          <img src="facebook.svg" alt="" style="padding-left: 30%;height: 100px;margin-top: 200px;">
-    <h4 style="padding-left: 30%;">
-        Facebook helps you connect and share <br>  with the people in your life
-    </h4>
-   </div>
-    <div class="col-md-6">
-    <form action="" style="border: 2px solid wheat;box-shadow: 50% solid black; ">
-        <textarea name="" id="" cols="4" rows="2" placeholder="Email Address Or Phone Number"  style="padding-left: 50%;background-color: white;color: black;margin-top: 25%;text-align: left;"></textarea>
-        <textarea name="" id="" cols="4" rows="2"  placeholder="Password" style="padding-left: 50%;background-color: white;color: black;text-align: left;"></textarea> <br>
-        <button class="btn btn-primary btn-lg" >Log In</button>
-        <h4><a href="forgot.html">Forgotten password </a></h4>
-    <button class="btn btn-success btn-lg">   <a href="signup.html" style="color: white;">  Create New Account</a></button>
-    </form>
-   
-</div>
-</div>          
-</div>  
+	<div class="container">
+		<div class="logo">
+			<img src="facebook.svg" alt="Facebook Logo" height="20%">
+            <p>facebook help you connect <br> and share  with the people <br> in your life</p>
+		</div>
+		<div class="login-form">
+			<form>
+				<input type="email" placeholder="Email or Phone Number">
+				<input type="password" placeholder="Password">
+				<button type="submit" class="btn btn-primary">Log In</button>
+				<a href="#">Forgot Account?</a>
+			</form>
+			<div class="or-separator">
+				<hr>
+				<span>or</span>
+				<hr>
+			</div>
+			<button class="create-account-btn">Create New Account</button>
+		</div>
+		EC2AC2F5
+    </div>
 </body>
 </html>
+
