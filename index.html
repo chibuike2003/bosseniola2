@@ -1,143 +1,237 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Facebook Welcome Page</title>
-<style>
-    body {
-	font-family: Arial, sans-serif;
-	background-color: #f2f2f2;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Welcome Page</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
 
-.container {
-	width: 800px;
-	margin: 40px auto;
-	position: relative;
-}
+        .container {
+            width: 800px;
+            margin: 40px auto;
+            position: relative;
+        }
 
-.logo {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-    height: 100px;
-}
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: 100px;
+        }
 
-.logo img {
-	width: 100px;
-	height: 100px;
-}
+        .logo img {
+            width: 100px;
+            height: 100px;
+        }
 
-.login-form {
-	width: 300px;
-	margin: 0 auto;
-	padding: 20px;
-	background-color: #fff;
-	border: 1px solid #ddd;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        .login-form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-.login-form h2 {
-	margin-top: 0;
-}
+        .login-form h2 {
+            margin-top: 0;
+        }
 
-.login-form input[type="email"], .login-form input[type="password"] {
-	width: 90%;
-	height: 40px;
-	margin-bottom: 20px;
-	padding: 10px;
-	border: 1px solid #ccc;
-}
+        .login-form input[type="email"],
+        .login-form input[type="password"] {
+            width: 90%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
 
-.login-form button[type="submit"] {
-	width: 100%;
-	height: 40px;
-	background-color: #1803d7d9;
-	color: #fff;
-	padding: 10px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-}
+        .login-form button[type="submit"] {
+            width: 100%;
+            height: 40px;
+            background-color: #1803d7d9;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-.login-form button[type="submit"]:hover {
-	background-color: #3e8e41;
-}
+        .login-form button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
 
-.login-form a {
-	color: #4CAF50;
-	text-decoration: none;
-}
+        .login-form a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
 
-.or-separator {
-	margin: 20px 0;
-	text-align: center;
-}
+        .or-separator {
+            margin: 20px 0;
+            text-align: center;
+        }
 
-.or-separator hr {
-	border: none;
-	border-top: 1px solid #ccc;
-	width: 30%;
-}
+        .or-separator hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            width: 30%;
+        }
 
-.or-separator span {
-	background-color: #fff;
-	padding: 0 10px;
-	position: relative;
-	top: -10px;
-}
+        .or-separator span {
+            background-color: #fff;
+            padding: 0 10px;
+            position: relative;
+            top: -10px;
+        }
 
-.create-account-btn {
-	width: 100%;
-	height: 40px;
-	background-color: #4CAF50;
-	color: #fff;
-	padding: 10px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-}
+        .create-account-btn {
+            width: 100%;
+            height: 40px;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-.background-image {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	background-position: center;
-}
+        /* Responsive Design */
+        @media only screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                margin: 20px auto;
+            }
 
-.background-image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
+            .logo {
+                position: relative;
+                margin: 0 auto;
+            }
 
+            .login-form {
+                width: 80%;
+                margin: 20px auto;
+            }
 
-</style>
+            .or-separator {
+                margin: 10px 0;
+            }
+
+            .create-account-btn {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .background-image {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .login-form {
+                width: 90%;
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .login-form input[type="email"],
+            .login-form input[type="password"] {
+                width: 100%;
+            }
+
+            .or-separator {
+                margin: 5px 0;
+            }
+
+            .create-account-btn {
+                width: 100%;
+                margin-top: 5px;
+            }
+        }
+
+        @media only screen and (max-width: 320px) {
+            .logo {
+                height: 50px;
+            }
+
+            .logo img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .login-form {
+                padding: 10px;
+            }
+
+            .login-form input[type="email"],
+            .login-form input[type="password"] {
+                height: 30px;
+                margin-bottom: 10px;
+            }
+
+            .create-account-btn {
+                height: 30px;
+                margin-top: 5px;
+            }
+        }
+
+        /* Hide the Facebook help text on smaller screens */
+        @media only screen and (max-width: 768px) {
+            .facebook-help-text {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-	<div class="container">
-		<div class="logo">
-			<img src="facebook.svg" alt="Facebook Logo" height="20%">
-            <p>facebook help you connect <br> and share  with the people <br> in your life</p>
-		</div>
-		<div class="login-form">
-			<form>
-				<input type="email" placeholder="Email or Phone Number">
-				<input type="password" placeholder="Password">
-				<button type="submit" class="btn btn-primary">Log In</button>
-				<a href="#">Forgot Account?</a>
-			</form>
-			<div class="or-separator">
-				<hr>
-				<span>or</span>
-				<hr>
-			</div>
-			<button class="create-account-btn">Create New Account</button>
-		</div>
-		EC2AC2F5
+    <div class="container">
+        <div class="row">
+            <div class="logo">
+                <img src="facebook.svg" alt="Facebook Logo" height="20%">
+                <p class="facebook-help-text">Facebook helps you connect <br> and share with the people <br> in your life.</p> <!-- Added class to hide on small screens -->
+            </div>
+            <div class="login-form">
+                <form>
+                    <input type="email" placeholder="Email or Phone Number">
+                    <input type="password" placeholder="Password">
+                    <button type="submit" class="btn btn-primary">Log In</button>
+                    <a href="#">Forgot Account?</a>
+                </form>
+                <div class="or-separator">
+                    <hr>
+                    <span>or</span>
+                    <hr>
+                </div>
+                <button class="create-account-btn">Create New Account</button>
+            </div>
+        </div>
     </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <p>English (UK)</p>
+                <p>Français (France)</p>
+                <p style="padding-left: 9%;">Español</p>
+                <p style="padding-left: 9%;">Deutsch</p>
+            </div>
+            <div class="col-6">
+                <p>How are you?</p>
+                <p>How are you?</p>
+                <p>How are you?</p>
+                <p>How are you?</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>How are you?</p>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
-
